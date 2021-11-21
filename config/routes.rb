@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :restaurants do
         resources :foods, only: [:index]
+      resources :line_foods, only: [:index, :create]
       end
     end
   end
